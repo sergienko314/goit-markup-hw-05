@@ -57,14 +57,40 @@
            <button type="button" class="button" data-modal-open>Заказать услугу</button>
            <div class="backdrope is-hidden" data-modal>
              <div class="modal">
-                 <button class="close-button" data-modal-close>
+                    <form action="">
+                        <strong class="">Оставьте свои данные, мы Вам перезвоним</strong>
+                    <label class="modal-form">
+                        <span>Имя</span>
+                        <input type="text" name="user-name">
+                    </label>
+                    <label class="modal-form">
+                        <span>Телефон</span>
+                        <input type="tel">
+                    </label>
+                    <label class="modal-form">
+                        <span>Комментарий</span>
+                        <input type="email">
+                    </label>
+                    <label>
+                        <textarea rows="5" placeholder="Введите текст"></textarea>
+                      </label>
+                      <br>
+                      <label>
+                        <input type="checkbox" value="">
+                        <span>Соглашаюсь с рассылкой и принимаю</span>
+                        <a href="">Условия договора</a>
+                      </label>
+                      <button type="submit"></button>
+                    </form>
+                </form>
+                </div>
+                 <button type="button" class="close-button" data-modal-close>
                     <svg class="close" width="11" height="11"> 
                         <use href="./img/icons/icons.svg#icon-close">
                         </use>
                     </svg>
                  </button>
              </div>
-           </div>
            </div>
    </section>
    <!-- Наши преимущества -->

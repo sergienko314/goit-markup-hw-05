@@ -8,6 +8,7 @@ body {
     --primery-text-color:#757575;
     --accent-text-color: #2196F3;
     --title-text-color: #212121;
+    --fast-time-animation: 250ms;
 }
 
 h2 {
@@ -122,6 +123,7 @@ a {
     font-size: 14px;
     line-height: 1.14;
     color: var(--title-text-color);
+    transition: color 250ms;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -148,10 +150,13 @@ a {
     font-size: 14px;
     line-height: 1.14;
     color: var(--primery-text-color);
+    transition: color 250ms;
 }
 .header-icon {
     margin-right: 10px;
     fill: #757575;
+    transition: fill 250ms;
+    
     
 }
 
@@ -169,6 +174,7 @@ a {
 .hero-style {
     background: #2F303A;
     background-image: url(../img/hero.jpeg);
+    background-color: rgba(47, 48, 58, 0.4);
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 200px;
@@ -219,6 +225,7 @@ a {
     left: 50%;
     width: 528px;
     height: 581px;
+    padding: 40px;
     transform: translate(-50%,-50%);
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -265,7 +272,10 @@ a {
     
 }
 
-
+.modal-form {
+    display: block;
+    margin-bottom: 10px;
+}
 
 
 /* benefits*/
@@ -330,14 +340,15 @@ a {
 }
 .business-list {
     display: inline-flex;
+    gap: 30px;
 }
-.business-list .item:not(:last-child) {
-    margin-right: 30px;
+.business-list .item {
+    position: relative;
 }
 
 .element-business {
-    position: relative;
-    top: -74px;
+    position: absolute;
+    bottom: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,10 +429,12 @@ a {
     height: 44px;
     background-color: #fff;
     border-radius: 50%;
+    transition: color 250ms;
 }
 
 .team-icon {
     fill: #AFB1B8;
+    transition: fill 250ms;
 }
 .icon-link:hover .team-icon,
 .icon-link:focus .team-icon {
@@ -457,12 +470,14 @@ a {
     height: 92px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
+    transition: border 250ms;
 }
 .client-icon {
     display: inline-flex;
     justify-content: center;
     align-self: center;
     fill: #AFB1B8;
+    transition: fill 250ms;
 
 }
 .client-link:hover .client-icon,
@@ -515,6 +530,7 @@ footer .logo {
     letter-spacing: 0.03em;
     color: #FFFFFF;
     text-decoration: none;
+    transition: color 250ms;
 }
 
 
@@ -574,11 +590,13 @@ footer .logo {
     width: 44px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transition:  background-color 250ms;
 
 
 }
 .footer-icon {
      fill: #FFFFFF;
+     transition: fill 250ms;
 }
 .footer-link:hover,
 .footer-link:focus {
@@ -606,6 +624,7 @@ footer .logo {
     border-radius: 4px;
     padding: 6px 22px;
     height: 38px;
+    transition: color 250ms;
 }
 .button-nav .item:not(:last-child) {
     margin-right: 8px;
@@ -640,6 +659,7 @@ footer .logo {
     padding: 0%;
     box-sizing: border-box;
     border: 1px solid #EEEEEE;
+    transition: color 250ms;
 }
 .project .item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -735,6 +755,7 @@ footer .logo {
     padding: 63px 24px;
     background-color: rgba(33, 150, 243, 0.9);
     color: #FFFFFF;
+
 }
 .project-box:hover .project-p {
     transform: translatey(0%);
