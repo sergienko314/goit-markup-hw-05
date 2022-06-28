@@ -8,7 +8,7 @@ body {
     --primery-text-color:#757575;
     --accent-text-color: #2196F3;
     --title-text-color: #212121;
-    --fast-time-animation: 250ms;
+    --fast-time-animation: 1000ms, ;
 }
 
 h2 {
@@ -124,6 +124,8 @@ a {
     line-height: 1.14;
     color: var(--title-text-color);
     transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+    
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -150,12 +152,14 @@ a {
     font-size: 14px;
     line-height: 1.14;
     color: var(--primery-text-color);
-    transition: color 250ms;
+    transition: color 250ms ;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 .header-icon {
     margin-right: 10px;
     fill: #757575;
     transition: fill 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
     
     
 }
@@ -207,9 +211,12 @@ a {
 
     cursor: pointer;
 }
+
+/* Modal */
 .is-hidden {
     visibility: hidden;
     opacity: 0;
+    
 }
 .backdrope {
     background-color: rgba(0, 0, 0, 0.2);
@@ -218,11 +225,11 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration:250ms 
 }
 .modal {
-    position: relative;
-    display: flex;3
-    flex-direction: row;
+    position: absolute;
     top: 50%;
     left: 50%;
     width: 528px;
@@ -232,7 +239,21 @@ a {
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+}
 
+.modal strong {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23/20);
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+}
+
+.modal-form {
+    display: block;
+    margin-bottom: 10px;
 }
 
 .close-button {
@@ -241,6 +262,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+
     position: absolute;
     top: 8px;
     right: 8px;
@@ -250,11 +272,19 @@ a {
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     
+   
+    
+}
+.close-button:hover .close {
+    fill: var(--accent-text-color);
+
 }
 .close {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: fill 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-style h1 {
@@ -273,10 +303,6 @@ a {
     
 }
 
-.modal-form {
-    display: block;
-    margin-bottom: 10px;
-}
 
 
 /* benefits*/
@@ -430,12 +456,14 @@ a {
     height: 44px;
     background-color: #fff;
     border-radius: 50%;
-    transition: color 250ms;
+    transition: background-color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon {
     fill: #AFB1B8;
     transition: fill 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-link:hover .team-icon,
 .icon-link:focus .team-icon {
@@ -472,6 +500,7 @@ a {
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     transition: border 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon {
     display: inline-flex;
@@ -479,6 +508,8 @@ a {
     align-self: center;
     fill: #AFB1B8;
     transition: fill 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 .client-link:hover .client-icon,
@@ -522,6 +553,9 @@ footer .logo {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+    transform: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .footer-contact-address {
     font-style: normal;
@@ -532,6 +566,7 @@ footer .logo {
     color: #FFFFFF;
     text-decoration: none;
     transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -592,6 +627,7 @@ footer .logo {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transition:  background-color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
@@ -603,7 +639,7 @@ footer .logo {
 .footer-link:focus {
     background-color: var(--accent-text-color);
 }
-/* button */
+/* project button */
 
 .button-nav {
     display: flex;
@@ -626,6 +662,8 @@ footer .logo {
     padding: 6px 22px;
     height: 38px;
     transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .button-nav .item:not(:last-child) {
     margin-right: 8px;
@@ -661,7 +699,9 @@ footer .logo {
     box-sizing: border-box;
     border: 1px solid #EEEEEE;
     transition: color 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .project .item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -748,6 +788,7 @@ footer .logo {
     height: 100%;
     transform: translatey(101%);
     transition: transform 250ms ease;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     font-weight: 400;
     font-size: 18px;
@@ -760,6 +801,7 @@ footer .logo {
 }
 .project-box:hover .project-p {
     transform: translatey(0%);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
