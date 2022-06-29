@@ -176,9 +176,8 @@ a {
 
 /* hero */
 .hero-style {
-    background: #2F303A;
-    background-image: url(../img/hero.jpeg);
-    background-color: rgba(47, 48, 58, 0.4);
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero.jpeg);
+    background-color: #2F303A;
     background-repeat: no-repeat;
     background-position: center;
     padding-top: 200px;
@@ -186,6 +185,8 @@ a {
 
     
 } 
+.hero-content {
+}
 
 .hero-style .button {
 
@@ -661,7 +662,7 @@ footer .logo {
     border-radius: 4px;
     padding: 6px 22px;
     height: 38px;
-    transition: color 250ms;
+    transition:  background-color 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
